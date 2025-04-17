@@ -455,13 +455,12 @@
         }
 
         .youtube-text {
-            color: rgb(75, 48, 48);
+            color: rgb(0, 0, 0);
             font-family: 'DM Sans', sans-serif;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 700;
             text-align: center;
             flex-grow: 1;
-            padding-right: 24px;
         }
 
         .youtube-button .three-dots-button {
@@ -486,10 +485,38 @@
             box-shadow: none;
         }
 
+        .youtube-subscribe-button {
+            width: 107px;
+            height: 27px;
+            margin: 4px auto 12px;
+            padding: 0 12px;
+            background-color: #4a4948;
+            border: none;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .youtube-subscribe-button i {
+            color: #FFF;
+            font-size: 12px;
+        }
+
+        .youtube-subscribe-button span {
+            color: #FFF;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
         .product-button-wrapper {
             position: relative;
             width: calc(100% - 12px);
             margin: 16px auto;
+            display: flex;
             display: flex;
             align-items: center;
             transform-origin: center;
@@ -601,7 +628,7 @@
             display: block;
             width: calc(100% - 12px);
             background-color: rgb(248, 245, 240);
-            border: 2px solid rgb(75, 48, 48);
+            border: none;
             border-radius: 30px;
             box-shadow: rgb(75, 48, 48) 8px 8px 0px 0px;
             overflow: hidden;
@@ -616,30 +643,40 @@
             width: 100%;
             aspect-ratio: 16/9;
             object-fit: cover;
-            border-radius: 28px;
+            border-radius: 30px;
             margin: 0;
         }
 
         .image-link-footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 20px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
-            border-radius: 0 0 28px 28px;
-        }
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Changed from center to flex-end */
+    padding: 16px 20px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.2) 25%,
 
-        .image-link-text {
-            color: white;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    border-radius: 0 0 28px 28px;
+    height: 50%;
+    padding-bottom: 15px; /* Added more bottom padding */
+}
+
+.image-link-text {
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0; /* Reset margin */
+}
 
         .image-link-button .three-dots-button {
             position: static;
@@ -682,7 +719,6 @@
             color: black;
             font-family: 'Inter', sans-serif;
             font-size: 16px;
-            font-weight: 700;
             text-decoration: none;
             box-shadow: 0 19px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.2s ease;
@@ -827,10 +863,10 @@
                 </a>
             </div>
             <div class="link-button-wrapper">
-                <a href="#" class="link-button regular">
-                    <span>AMAZON LINKS! (frother/ice molds/rings)</span>
+                <a href="https://www.amazon.com/shop/coffeebae97?ascsubtag=srctok-9babed69e926af30&btn_ref=srctok-9babed69e926af30" class="link-button regular" target="_blank" rel="noopener noreferrer">
+                    <span style="text-shadow: 0px 0 black, -0.2px 0 black;">AMAZON LINKS! (frother/ice molds/rings)</span>
                 </a>
-                <button aria-label="Share link" class="three-dots-button">
+                <button aria-label="Share link" class="three-dots-button" >
                     <svg width="3" height="12" viewBox="0 0 3 12" fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -841,8 +877,8 @@
             </div>
 
             <div class="link-button-wrapper">
-                <a href="#" class="link-button regular">
-                    <span>Matcha</span>
+                <a href="https://www.matchaeologist.com/?rfsn=4595305.14f410&utm_source=refersion&utm_medium=affiliate&utm_campaign=4595305.14f410" class="link-button regular" target="_blank" rel="noopener noreferrer">
+                    <span style="text-shadow: 0px 0 black, -0.2px 0 black;">Matcha</span>
                 </a>
                 <button aria-label="Share link" class="three-dots-button">
                     <svg width="3" height="12" viewBox="0 0 3 12" fill="currentColor"
@@ -862,7 +898,7 @@
                         <img src="https://ugc.production.linktr.ee/aec92122-f985-4e10-82f8-19fc67b45f46_Screenshot-2024-03-04-at-00.05.40.png?io=true&size=thumbnail-stack-v1_0
                         " alt="My Coffee Setup">
                         <div class="grid-button-content">
-                            <span class="grid-button-text">my coffee setup</span>
+                            <span class="grid-button-text" style="text-shadow: 0px 0 black, -0.2px 0 black;">my coffee setup</span>
                             <button aria-label="Share link" class="three-dots-button">
                                 <svg width="3" height="12" viewBox="0 0 3 12" fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -880,7 +916,7 @@
                         <img src="https://ugc.production.linktr.ee/b8c38133-eb9a-43a4-ac0e-d694bba78f1f_Screenshot-2024-03-04-at-00.03.41.png?io=true&size=thumbnail-stack-v1_0
                         " alt="Vodka Infused">
                         <div class="grid-button-content">
-                            <span class="grid-button-text">vodka infused nerd clusters</span>
+                            <span class="grid-button-text" style="text-shadow: 0px 0 black, -0.2px 0 black;">vodka infused nerd clusters</span>
                             <button aria-label="Share link" class="three-dots-button">
                                 <svg width="3" height="12" viewBox="0 0 3 12" fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -899,7 +935,7 @@
             <div class="link-button-wrapper">
                 <a href="https://coffeebae97.substack.com/" target="_blank" class="link-button">
                     <i class="fa-regular fa-envelope button-icon" style="color: #000; "></i>
-                    <span>Substack</span>
+                    <span style="text-shadow: 0px 0 black, -0.2px 0 black;">Substack</span>
                 </a>
                 <button aria-label="Share link" class="three-dots-button">
                     <svg width="3" height="12" viewBox="0 0 3 12" fill="currentColor"
@@ -914,7 +950,7 @@
             <div class="link-button-wrapper">
                 <a href="https://www.instagram.com/coffeebae97/" target="_blank" class="link-button">
                     <i class="fa-brands fa-instagram button-icon" style="color: #000;"></i>
-                    <span>Instagram (coffeebae97)</span>
+                    <span style="text-shadow: 0px 0 black, -0.2px 0 black;">Instagram (coffeebae97)</span>
                 </a>
                 <button aria-label="Share link" class="three-dots-button">
                     <svg width="3" height="12" viewBox="0 0 3 12" fill="currentColor"
@@ -935,7 +971,7 @@
                         </iframe>
                     </div>
                     <div class="youtube-content">
-                        <span class="youtube-text">Youtube (@coffeebae97)</span>
+                        <span class="youtube-text">Youtube (/coffeebae97)</span>
                         <button aria-label="Share link" class="three-dots-button">
                             <svg width="3" height="12" viewBox="0 0 3 12" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -945,13 +981,17 @@
                             </svg>
                         </button>
                     </div>
+                    <div class="youtube-subscribe-button">
+                        <i class="fab fa-youtube"></i>
+                        <span>Subscribe</span>
+                    </div>
                 </a>
             </div>
 
             <div class="link-button-wrapper">
                 <a href="https://www.tiktok.com/@coffeebae97" target="_blank" class="link-button">
                     <i class="fa-brands fa-tiktok button-icon" style="color: #000;"></i>
-                    <span>Tiktok (coffeebae97)</span>
+                    <span style="text-shadow: 0px 0 black, -0.2px 0 black;">Tiktok (coffeebae97)</span>
                 </a>
                 <button aria-label="Share link" class="three-dots-button">
                     <svg width="3" height="12" viewBox="0 0 3 12" fill="currentColor"
@@ -1100,13 +1140,13 @@
         </div>
     </div>
     <div class="linktree-button-wrapper">
-        <a href="#" class="linktree-button">
+        <a href="https://auth.linktr.ee/login?state=hKFo2SA4aXl3dFVUX3BpdHFIaHItMUtiM01takRhUmIzdFpqUqFupWxvZ2luo3RpZNkgSDhGNVhiTFNjXzZxaW53bEVXc0dpMkdTSS14Z2NKaDWjY2lk2SBYYTl5SUJRSWh0ZTA2SVp4c1VQbFo1OE5xUGNETnk0Zg&client=Xa9yIBQIhte06IZxsUPlZ58NqPcDNy4f&protocol=oauth2&auth0Client=eyJuYW1lIjoiSFdJT0F1dGhCdW5kbGUiLCJ2ZXJzaW9uIjoidW5rbm93biIsImVudmlyb25tZW50Ijp7Im5hbWUiOiJQSFAiLCJ2ZXJzaW9uIjoiOC4zLjE0In19&response_type=code&scope=openid%20profile%20email%20username%20offline_access%20read%3Aauthenticators%20&redirect_uri=https%3A%2F%2Flinktr.ee%2Fconnect%2Fservice%2Fauth0%3Futm_campaign%3Dfooter_logo_cta&audience=https%3A%2F%2Flinktr.ee%2Fapi&mfeOnboarding=true&utm_source=linktree&utm_medium=profile&utm_content=coffeebae97&utm_campaign=footer_logo_cta#/register" class="linktree-button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" height="16px">
                 <path
                     d="M13.5108 5.85343L17.5158 1.73642L19.8404 4.11701L15.6393 8.12199H21.5488V11.4268H15.6113L19.8404 15.5345L17.5158 17.8684L11.7744 12.099L6.03299 17.8684L3.70842 15.5438L7.93745 11.4361H2V8.12199H7.90944L3.70842 4.11701L6.03299 1.73642L10.038 5.85343V0H13.5108V5.85343ZM10.038 16.16H13.5108V24.0019H10.038V16.16Z"
                     fill="#000000"></path>
             </svg>
-            <p>Join coffeebae97 on Linktree</p>
+            <p style="-webkit-text-stroke: 0.5px black;">Join coffeebae97 on Linktree</p>
         </a>
     </div>
     </div>

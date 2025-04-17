@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="stylelinktree.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
 
     <style>
@@ -30,8 +31,12 @@
             padding: 12px 16px;
             display: flex;
             justify-content: flex-end;
-            transition: all ease-in-out;
-            animation-duration: 500ms;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: opacity 0.3s ease;
         }
 
         .share-button {
@@ -40,7 +45,7 @@
             border-radius: 50%;
             background-color: #1A1A1A59;
             border: none;
-            transform: translateX(-4px);
+            transform: translateX(4px);
         }
 
         .share-button svg {
@@ -53,7 +58,7 @@
             width: 100%;
             max-width: 640px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 64px 24px 0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -89,10 +94,23 @@
             font-family: 'DM Sans', sans-serif;
             color: #4b3030;
             font-weight: 700;
-            letter-spacing: -.4px;
+            letter-spacing: -0.4px;
             line-height: 1.5;
-            text-align: center;
-            margin-top: 10px;
+            text-align: left;
+            margin-top: 16px;
+            margin-bottom: 2px;
+            padding-left: 16px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .profilename p {
+            margin: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            text-wrap: balance;
         }
 
         .profilebio {
@@ -109,14 +127,14 @@
             width: 32px;
             height: 32px;
             color: rgb(75, 48, 48);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .social-wrapper {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 11px;
         }
 
         .toggle-container {
@@ -279,8 +297,8 @@
         .button-icon {
             position: absolute;
             left: 10px;
-            width: 30px; 
-            height: 30px; 
+            width: 30px;
+            height: 30px;
             color: rgb(75, 48, 48);
             font-size: 27px;
         }
@@ -525,15 +543,16 @@
             color: rgb(75, 48, 48);
             font-family: 'DM Sans', sans-serif;
             font-size: 16px;
-            font-weight: 700;
+            font-weight: 600;
             text-align: center;
-            margin-bottom:  -8px;
+            margin-bottom: -8px;
         }
 
         .product-count {
             color: rgb(75, 48, 48);
             font-family: 'DM Sans', sans-serif;
             font-size: 14px;
+            font-weight: 500;
             opacity: 0.7;
             text-align: center;
         }
@@ -610,7 +629,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 16px 20px;
-            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
             border-radius: 0 0 28px 28px;
         }
 
@@ -618,7 +637,8 @@
             color: white;
             font-family: 'DM Sans', sans-serif;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
         .image-link-button .three-dots-button {
@@ -645,29 +665,47 @@
         }
 
         .linktree-button-wrapper {
-            width: 80%;
-            margin: 32px auto;
-            text-align: center;
+            width: 100%;
+            margin: 8px auto;
+            margin-bottom: 12%;
+            display: flex;
+            justify-content: center;
         }
 
         .linktree-button {
-            padding: 12px 24px;
+            width: 271.41px;
+            height: 48px;
+            padding: 0 16px;
             background-color: white;
             border: none;
             border-radius: 24px;
             color: black;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 14px;
-            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
             text-decoration: none;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 19px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.2s ease;
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         .linktree-button:hover {
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
             transform: translateY(-1px);
+        }
+
+        .linktree-button svg {
+            flex-shrink: 0;
+        }
+
+        .linktree-button p {
+            margin: 0;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -690,7 +728,8 @@
     <div class="container">
         <div class="profile-wrapper">
             <div>
-                <img src="linktreeimage/pp.jpg" class="profilepic">
+                <img src="https://ugc.production.linktr.ee/ff3ce58c-af42-4094-aecf-1be2c0cd71d4_121243474-785497558936237-4616786680976586521-n.jpeg?io=true&size=avatar-v3_0
+                " class="profilepic">
             </div>
             <div class="d-flex">
                 <div class="profilename">
@@ -769,15 +808,19 @@
         </div>
 
         <div id="content1" class="content active">
-              <div class="link-button-wrapper">
-                <a href="#" class="image-link-button">
-                    <img src="https://ugc.production.linktr.ee/e4b374e7-b785-4332-ae2c-2131ae2b427d_Screenshot-2024-07-23-at-9.46.19-AM.png?io=true&size=thumbnail-feature-v1_0
-                    " alt="Coffee Setup" class="image-link-image">
+            <div class="link-button-wrapper">
+                <a href="https://www.amazon.com/dp/1797229508/ref=cm_sw_r_as_gl_api_gl_i_69HDCS0BP7PY86KJFWMM?linkCode=ml1&tag=coffeebae97-20"
+                    class="image-link-button" target="_blank" rel="noopener noreferrer">
+                    <img src="https://ugc.production.linktr.ee/e4b374e7-b785-4332-ae2c-2131ae2b427d_Screenshot-2024-07-23-at-9.46.19-AM.png?io=true&size=thumbnail-feature-v1_0"
+                        alt="Coffee Setup" class="image-link-image">
                     <div class="image-link-footer">
                         <span class="image-link-text">Coffee Cards: 50 Recipes for a Better Brew Cards</span>
                         <button aria-label="Share link" class="three-dots-button">
-                            <svg width="3" height="12" viewBox="0 0 3 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.5 12.0122C1.0875 12.0122 0.734375 11.8653 0.440625 11.5716C0.146875 11.2778 0 10.9247 0 10.5122C0 10.0997 0.146875 9.74658 0.440625 9.45283C0.734375 9.15908 1.0875 9.01221 1.5 9.01221C1.9125 9.01221 2.26562 9.15908 2.55938 9.45283C2.85313 9.74658 3 10.0997 3 10.5122C3 10.9247 2.85313 11.2778 2.55938 11.5716C2.26562 11.8653 1.9125 12.0122 1.5 12.0122ZM1.5 7.51221C1.0875 7.51221 0.734375 7.36533 0.440625 7.07158C0.146875 6.77783 0 6.42471 0 6.01221C0 5.59971 0.146875 5.24658 0.440625 4.95283C0.734375 4.65908 1.0875 4.51221 1.5 4.51221C1.9125 4.51221 2.26562 4.65908 2.55938 4.95283C2.85313 5.24658 3 5.59971 3 6.01221C3 6.42471 2.85313 6.77783 2.55938 7.07158C2.26562 7.36533 1.9125 7.51221 1.5 7.51221ZM1.5 3.01221C1.0875 3.01221 0.734375 2.86533 0.440625 2.57158C0.146875 2.27783 0 1.92471 0 1.51221C0 1.09971 0.146875 0.746582 0.440625 0.452832C0.734375 0.159082 1.0875 0.012207 1.5 0.012207C1.9125 0.012207 2.26562 0.159082 2.55938 0.452832C2.85313 0.746582 3 1.09971 3 1.51221C3 1.92471 2.85313 2.27783 2.55938 2.57158C2.26562 2.86533 1.9125 3.01221 1.5 3.01221Z" fill="currentColor" />
+                            <svg width="3" height="12" viewBox="0 0 3 12" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.5 12.0122C1.0875 12.0122 0.734375 11.8653 0.440625 11.5716C0.146875 11.2778 0 10.9247 0 10.5122C0 10.0997 0.146875 9.74658 0.440625 9.45283C0.734375 9.15908 1.0875 9.01221 1.5 9.01221C1.9125 9.01221 2.26562 9.15908 2.55938 9.45283C2.85313 9.74658 3 10.0997 3 10.5122C3 10.9247 2.85313 11.2778 2.55938 11.5716C2.26562 11.8653 1.9125 12.0122 1.5 12.0122ZM1.5 7.51221C1.0875 7.51221 0.734375 7.36533 0.440625 7.07158C0.146875 6.77783 0 6.42471 0 6.01221C0 5.59971 0.146875 5.24658 0.440625 4.95283C0.734375 4.65908 1.0875 4.51221 1.5 4.51221C1.9125 4.51221 2.26562 4.65908 2.55938 4.95283C2.85313 5.24658 3 5.59971 3 6.01221C3 6.42471 2.85313 6.77783 2.55938 7.07158C2.26562 7.36533 1.9125 7.51221 1.5 7.51221ZM1.5 3.01221C1.0875 3.01221 0.734375 2.86533 0.440625 2.57158C0.146875 2.27783 0 1.92471 0 1.51221C0 1.09971 0.146875 0.746582 0.440625 0.452832C0.734375 0.159082 1.0875 0.012207 1.5 0.012207C1.9125 0.012207 2.26562 0.159082 2.55938 0.452832C2.85313 0.746582 3 1.09971 3 1.51221C3 1.92471 2.85313 2.27783 2.55938 2.57158C2.26562 2.86533 1.9125 3.01221 1.5 3.01221Z"
+                                    fill="currentColor" />
                             </svg>
                         </button>
                     </div>
@@ -811,10 +854,9 @@
                 </button>
             </div>
             <div>
-                <p>featured</p>
+                <p style="font-weight: 700;">featured</p>
             </div>
             <div class="grid-container">
-                <!-- Grid Item 1 -->
                 <div class="grid-item-wrapper">
                     <a href="https://www.tiktok.com/@coffeebae97/video/7231633615002537258" class="grid-button">
                         <img src="https://ugc.production.linktr.ee/aec92122-f985-4e10-82f8-19fc67b45f46_Screenshot-2024-03-04-at-00.05.40.png?io=true&size=thumbnail-stack-v1_0
@@ -833,7 +875,6 @@
                     </a>
                 </div>
 
-                <!-- Grid Item 2 -->
                 <div class="grid-item-wrapper">
                     <a href="https://www.tiktok.com/@coffeebae97/video/7341146923459480878" class="grid-button">
                         <img src="https://ugc.production.linktr.ee/b8c38133-eb9a-43a4-ac0e-d694bba78f1f_Screenshot-2024-03-04-at-00.03.41.png?io=true&size=thumbnail-stack-v1_0
@@ -853,7 +894,7 @@
                 </div>
             </div>
             <div>
-                <p>find me everywhere</p>
+                <p style="font-weight: 700;">find me everywhere</p>
             </div>
             <div class="link-button-wrapper">
                 <a href="https://coffeebae97.substack.com/" target="_blank" class="link-button">
@@ -958,10 +999,10 @@
         <div class="product-button-wrapper">
             <a href="https://tr.ee/MFuJUl" class="product-button">
                 <div class="product-images">
-                  
+
                     <img src="https://ugc.production.linktr.ee/6f5faf36-dd97-4f3b-8ad3-08b362b791ac_image.png?io=true&size=square-fit
                     " alt="Raspberry product 1" class="product-image" style="margin-left: 175px;">
-                    
+
                 </div>
                 <div class="product-content">
                     <div class="product-info">
@@ -1010,9 +1051,9 @@
                     <img src="https://ugc.production.linktr.ee/1b4502eb-8dc5-4859-992e-7c890f4c8740_71xwAAXHJLL.--AC-SX300-SY300-QL70-FMwebp-.webp?io=true&size=square-fit
 
                     " alt="Raspberry product 1" class="product-image">
-                    <img src="https://ugc.production.linktr.ee/6ae2d034-4a5a-4a8d-ba59-ea2158cb0fea_GUEST-6ac27504-1221-423b-9c0f-3a8d9be24b86.jpeg?io=true&size=square-fit
+                    <img src="https://ugc.production.linktr.ee/b8cc105e-166f-4716-b834-116b5ccf6dfc_61uIoxUtfCL.--AC-SX300-SY300-QL70-FMwebp-.webp?io=true&size=square-fit
                     " alt="Raspberry product 2" class="product-image">
-                    <img src="https://ugc.production.linktr.ee/e80838f1-c410-40fe-9034-79a5f9081fbb_61MylJBNqXL.--AC-SX300-SY300-QL70-FMwebp-.webp?io=true&size=square-fit
+                    <img src="https://ugc.production.linktr.ee/2dbd8811-44b2-4630-85bc-d7d045d1b7ee_81JzotJV5SL.--AC-SY300-SX300-QL70-FMwebp-.webp?io=true&size=square-fit
                     " alt="Raspberry product 3" class="product-image">
                 </div>
                 <div class="product-content">
@@ -1034,12 +1075,12 @@
         <div class="product-button-wrapper">
             <a href="https://tr.ee/MFuJUl" class="product-button">
                 <div class="product-images">
-                    <img src="https://ugc.production.linktr.ee/3712c3ce-a749-47ed-9da7-945ebca6f79b_51hLRr74V5L.-SL500-.jpeg?io=true&size=square-fit
+                    <img src="https://ugc.production.linktr.ee/2ab5274c-167a-4f62-82ef-9cef62e3eca7_61qRyPA528L.--AC-SX300-SY300-QL70-FMwebp-.webp?io=true&size=square-fit
                     " alt="Raspberry product 1" class="product-image">
-                    <img src="https://ugc.production.linktr.ee/6ae2d034-4a5a-4a8d-ba59-ea2158cb0fea_GUEST-6ac27504-1221-423b-9c0f-3a8d9be24b86.jpeg?io=true&size=square-fit
+                    <img src="https://ugc.production.linktr.ee/a9926d89-3bb3-4ceb-9f1e-b7dfed488283_81wrTg90J8L.--AC-SX300-SY300-QL70-FMwebp-.webp?io=true&size=square-fit
                     " alt="Raspberry product 2" class="product-image">
-                    <img src="https://ugc.production.linktr.ee/e80838f1-c410-40fe-9034-79a5f9081fbb_61MylJBNqXL.--AC-SX300-SY300-QL70-FMwebp-.webp?io=true&size=square-fit
-                    " alt="Raspberry product 3" class="product-image">
+                    <img src="https://ugc.production.linktr.ee/8e1bc25f-1ff2-4040-a9a3-a02d076fc885_7189ettO-bL.-AC-SY300-SX300-.jpeg?io=true&size=square-fit
+                    " alt="Combler Mini Ice Cube Tray 3 Pack" class="product-image">
                 </div>
                 <div class="product-content">
                     <div class="product-info">
@@ -1060,7 +1101,12 @@
     </div>
     <div class="linktree-button-wrapper">
         <a href="#" class="linktree-button">
-            Join coffeebae97 on Linktree
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" height="16px">
+                <path
+                    d="M13.5108 5.85343L17.5158 1.73642L19.8404 4.11701L15.6393 8.12199H21.5488V11.4268H15.6113L19.8404 15.5345L17.5158 17.8684L11.7744 12.099L6.03299 17.8684L3.70842 15.5438L7.93745 11.4361H2V8.12199H7.90944L3.70842 4.11701L6.03299 1.73642L10.038 5.85343V0H13.5108V5.85343ZM10.038 16.16H13.5108V24.0019H10.038V16.16Z"
+                    fill="#000000"></path>
+            </svg>
+            <p>Join coffeebae97 on Linktree</p>
         </a>
     </div>
     </div>
@@ -1070,29 +1116,47 @@
         const content1 = document.getElementById('content1');
         const content2 = document.getElementById('content2');
         const toggleLabel = document.querySelector('.toggle-label');
-
-        function handleClick(e) {
-            const rect = toggleLabel.getBoundingClientRect();
-            const clickX = e.clientX - rect.left;
-
-            if (clickX < rect.width / 2) {
-                toggleCheckbox.checked = false;
-                content1.classList.add('active');
-                content2.classList.remove('active');
+    
+        function switchContent(toContent2) {
+            if (toContent2) {
+                content1.style.opacity = '0';
+                setTimeout(() => {
+                    content1.style.display = 'none';
+                    content2.style.display = 'block';
+                    setTimeout(() => {
+                        content2.style.opacity = '1';
+                    }, 50);
+                }, 200);
             } else {
-                toggleCheckbox.checked = true;
-                content1.classList.remove('active');
-                content2.classList.add('active');
+                content2.style.opacity = '0';
+                setTimeout(() => {
+                    content2.style.display = 'none';
+                    content1.style.display = 'block';
+                    setTimeout(() => {
+                        content1.style.opacity = '1';
+                    }, 50);
+                }, 200);
             }
         }
-
-        toggleLabel.addEventListener('click', function (e) {
+    
+        toggleLabel.addEventListener('click', function(e) {
             e.preventDefault();
-
-            handleClick(e);
+            const rect = toggleLabel.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+    
+            if (clickX < rect.width / 2) {
+                toggleCheckbox.checked = false;
+                switchContent(false);
+            } else {
+                toggleCheckbox.checked = true;
+                switchContent(true);
+            }
         });
-
-        handleClick({ clientX: toggleLabel.getBoundingClientRect().left });  // Initialize based on default state
+    
+        // Initial state
+        content1.style.display = 'block';
+        content1.style.opacity = '1';
+        content2.style.display = 'none';
     </script>
 </body>
 

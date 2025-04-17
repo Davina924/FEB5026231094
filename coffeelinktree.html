@@ -1158,6 +1158,24 @@
         content1.style.opacity = '1';
         content2.style.display = 'none';
     </script>
+    <script>
+    // Add this after your existing script
+    let lastScrollPosition = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+        const currentScrollPosition = window.pageYOffset;
+        
+        if (currentScrollPosition > 20) {
+            header.style.opacity = Math.max(1 - (currentScrollPosition - 20) / 100, 0);
+            header.style.transition = 'opacity 0.3s ease';
+        } else {
+            header.style.opacity = '1';
+        }
+        
+        lastScrollPosition = currentScrollPosition;
+    });
+</script>
 </body>
 
 </html>
